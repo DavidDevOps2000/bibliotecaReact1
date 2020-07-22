@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+
+body{
+  overflow: hidden;
 }
 
 .App-logo {
@@ -13,20 +14,41 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bem-vindo{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 2vmin);
+  text-align: center;
+  border-radius:30;
+  position: relative;
   color: white;
+  z-index: 4;
+  border:black;
+  transform: translate(80%);
+  transform: translateY(-250%);
+  text-shadow: 2px 2px black;
+
 }
 
-.App-link {
-  color: #61dafb;
+.rodape{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:orange;
+  float: left;
 }
+.divMsgCentro{
+  transform: translate(80%);
+  transform: translateY(0%);
+}
+
+
+a:hover{
+  color:white
+}
+
 
 @keyframes App-logo-spin {
   from {
