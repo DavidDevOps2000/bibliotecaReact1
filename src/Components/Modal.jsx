@@ -14,16 +14,16 @@ return(
 				<div className="modal-body">
 					<form>
 						<div className="form-group">
-							<input type="Email" style={{borderRadius:18}} className="form-control" placeholder="Seu Email"/>
+							<input type="Email" style={{borderRadius:18}} id='email' className="form-control" placeholder="Seu Email"/>
 						</div>
 							<div className="form-group">
-							<input type="password" style={{borderRadius:18}} className="form-control" placeholder="Senha" />
+							<input type="password" style={{borderRadius:18}} id='senha' className="form-control" placeholder="Senha" />
 						</div>
 					</form>					
 				</div>
 				<div className="modal-footer">
 					<button type="button" className="btn btn-secondary" style={{borderRadius:18}} data-dismiss="modal">Fechar</button>
-					<button type="button" className="btn btn-primary" style={{borderRadius:18}} >logar-se</button>
+					<button type="button" className="btn btn-primary" onclick="" style={{borderRadius:18}} >logar-se</button>
 				</div>					
 			</div>			
 		</div>		
