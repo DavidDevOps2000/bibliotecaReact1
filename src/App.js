@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Body from './Components/Body';
+import Routes from './Routes';
 
-function App() {
+export default function App() {
   return (
     <>
-    <Body/>
+        <Routes/>
     </>
   );
 }
 
-export default App;
