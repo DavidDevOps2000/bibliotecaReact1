@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 import ModalCadastroLivro from './ModalCadastroLivro';
 
-export default class LivrosCadastrados extends Component {//Class nao pode fazer uso de Hoks
-    constructor() {// Serão esses dados que serão carregados por padrão ao abrir isso
+export default class LivrosCadastros extends Component {//Class nao pode fazer uso de Hoks
+
+    constructor() {
         super();
 
         this.manipuladorSubmit = this.manipuladorSubmit.bind(this);
-        this.delLivroAutor = this.delLivroAutor.bind(this);
+        this.delCadastro = this.delCadastro.bind(this);
         this.state = {
-            disc: [
+            lugar: [
                 {
                     id: 1,
-                    nomeLivro: 'PHP',
-                    nomeAutor: '200hrs'
+                    nomeLivro: 'Senhor dos aneis',
+                    nomeAutor: 'J. R. R. Tolkien'
                 },
                 {
                     id: 2,
-                    nome: 'Java',
-                    nomeAutor: '180hrs'
-                },
-                {
-                    id: 3,
-                    nome: 'C#',
-                    nomeAutor: '300hrs'
+                    nomeLivro: 'As Aventuras de Alice no País das Maravilhas,',
+                    nomeAutor: 'Lewis Carroll'
                 },
             ]
         }
@@ -31,42 +27,42 @@ export default class LivrosCadastrados extends Component {//Class nao pode fazer
     manipuladorSubmit({nomeLivro, nomeAutor}){
         let state = this.state;
         let dados ={
-            id:state.disc.length + 1,
-            nomeLivro:nomeLivro,
+            id:state.lugar.length + 1,
+            nomeLivro: nomeLivro,
             nomeAutor: nomeAutor
         }
-        this.setState({disc: state.disc.concat(dados)});
+        this.setState({lugar: state.lugar.concat(dados)});
     }
 
-    delLivroAutor(id){
-        const {disc} = this.state;
-        const discIndex = disc.findIndex(disc => disc.id == id);
-        disc.splice(discIndex);
-        this.setState({disc});
+    delCadastro(id){
+        const {lugar} = this.state;
+        const discIndex = lugar.findIndex(lugar => lugar.id == id);
+        lugar.splice(discIndex);
+        this.setState({lugar});
+
     }
-    
     render() {
         return (
             <>
                 <ModalCadastroLivro carregarInfo={this.manipuladorSubmit}/>
-                <table className="table table-sm">
+                <table className="table table-sm livro-cadastrado">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome Livro</th>
-                            <th scope="col">Nome Autor</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">Nome do Livro</th>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Opção</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.disc.map((numLivro, index) => {
+                        {this.state.lugar.map((numLivro, index) => {
                             return (
                                 <tr>
                                     <th scope="row">{numLivro.id}</th>
                                     <td>{numLivro.nomeLivro}</td>
                                     <td>{numLivro.nomeAutor}</td>
-                                    <td><button type="button" className="btn btn-danger btn-sm"
-                                        onClick={this.delLivroAutor}>Remover</button></td>
+                                    <td><button type="button" className="btn btn-info btn-sm btn-outline-danger"
+                                        onClick={this.delCadastro}>Remover</button></td>
                                 </tr>
                             )
                         })}
@@ -74,5 +70,7 @@ export default class LivrosCadastrados extends Component {//Class nao pode fazer
                 </table>
             </>
         )
+
     }
+
 }

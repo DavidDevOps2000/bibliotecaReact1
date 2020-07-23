@@ -3,9 +3,6 @@ body{
   overflow: hidden;
 }
 
-
-
-
 .livrosTela{
   background-image: url('./Assets/biblioteca.jpg');
   height: 560px;
@@ -19,6 +16,18 @@ body{
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.livro-cadastrado{
+  width: 70%;
+  background-color: white;
+  border-radius:30;
+  position: relative;
+  color: white;
+  z-index: 4;
+  color: black;
+  transform: translateY(-280%);
+
 }
 
 .bem-vindo{
