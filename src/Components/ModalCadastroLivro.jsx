@@ -20,18 +20,19 @@ export default function ModalCadastroLivro({ carregarInfo }) {
 
     return (
         <>
-        <div className="modal fade bd-example-modal-lg" tabindex="-1" id="modalCadastrarLivro" role="dialog" aria-labelledby="modalCadastrarLivro" aria-hidden="true">
+        <div className="modal fade bd-example-modal-lg" tabindex="-1" id="modalCadastrarLivro" 
+        role="dialog" aria-labelledby="modalCadastrarLivro" aria-hidden="true">
             <div className="modal-dialog modal-lg">
                 <div className="modal-content">
-                    <form style={{ margin: '35px auto' }} onSubmit={manipuladorSubmit}>
+                    <form style={{ margin:'35px'}} onSubmit={manipuladorSubmit}>
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Nome do Livro" nome={nomeLivro} onChange={e => setNomeLivro(e.target.value)} />
+                                <input type="text" class="form-control" placeholder="Nome do Livro" nome={nomeLivro} onChange={e => setNomeLivro(e.target.value)} required/>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Nome do Autor" nome={nomeAutor} onChange={e => setNomeAutor(e.target.value)} />
+                                <input type="text" class="form-control" placeholder="Nome do Autor" nome={nomeAutor} onChange={e => setNomeAutor(e.target.value)} required/>
                             </div>
-                            <button type="submit" className="btn btn-success">Cadastrar</button>
+                            <button type="submit" className="btn btn-success">Incluir</button>
                         </div>
                     </form>
                 </div>

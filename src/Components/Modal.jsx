@@ -26,7 +26,7 @@ export default class Modal extends Component{//Nao use () juntamente com Compone
 					<div className="modal-dialog modal-dialig-centered" role="document">
 						<div className="modal-content">
 							<div className="modal-header">
-								<h5 className="modal-title" id="ModCenter">Login</h5>
+								<h5 className="modal-title" id="ModCenter">Login: <p style={{color:'gray'}}>Login:Admin, Senha:Admin123</p> </h5>
 								<button type="button" className="close" data-dismiss="modal" aria-label="Fechar">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -34,10 +34,10 @@ export default class Modal extends Component{//Nao use () juntamente com Compone
 							<div className="modal-body">
 								<form>
 									<div className="form-group">
-										<input type="Email" onInput={(e) =>this.setState({email: e.target.value})} style={{ borderRadius: 18 }} onChange={this.handleChange} className="form-control" placeholder="Seu Email" />
+										<input type="Email" onInput={(e) =>this.setState({email: e.target.value})} style={{ borderRadius: 18 }} className="form-control" placeholder="Seu Email" />
 									</div>
 									<div className="form-group">
-										<input type="password" onInput={(e) =>this.setState({senha: e.target.value})} style={{ borderRadius: 18 }} onChange={this.handleChange} className="form-control" placeholder="Senha" />
+										<input type="password" onInput={(e) =>this.setState({senha: e.target.value})} style={{ borderRadius: 18 }} className="form-control" placeholder="Senha" />
 									</div>
 								</form>
 							</div>

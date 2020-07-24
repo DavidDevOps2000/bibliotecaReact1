@@ -55,10 +55,11 @@ export default class LivrosCadastros extends Component {//Class nao pode fazer u
                         {this.state.lugar.map((numLivro, index) => {
                             return(<tr>
                                     <th scope="row">{numLivro.id}</th>
+                                    
                                     <td>{numLivro.nomeLivro}</td>
                                     <td>{numLivro.nomeAutor}</td>
-                                    <td><button type="button" className="btn btn-info btn-sm btn-outline-danger"
-                                        onClick={this.delCadastro}>Apagar Livros</button></td>
+                                    
+                                    <td><button type="button" className="btn btn-info btn-sm btn-outline-danger" onClick={this.delCadastro}>Apagar Livros</button></td>
                                     </tr>)})}
                     </tbody>
                 </table>

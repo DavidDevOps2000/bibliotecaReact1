@@ -10,7 +10,7 @@ export default function Livros() {
         <Navbar/>
                 <div className="livrosTela" >
                     <div>
-                        <button className="btn btn-primary" style={{ borderRadius: 15 }} data-toggle="modal" data-target="#modalCadastrarLivro">Cadastrar um livro</button>
+                        <button className="btn btn-primary" style={{ borderRadius: 15 }} data-toggle="modal" data-target="#modalCadastrarLivro">Clique aqui para cadastrar um livro</button>
                     </div>
                 </div>
             <Footer/>

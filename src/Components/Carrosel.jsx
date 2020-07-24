@@ -3,6 +3,8 @@ import React from 'react';
 import img1 from '../Assets/img1.jpg';
 import img2 from '../Assets/img2.jpg';
 import img3 from '../Assets/img3.jpg';
+import img4 from '../Assets/img4.png';
+import img5 from '../Assets/img5.png';
 
 export default function Carrosel() {
 	return (
@@ -13,6 +15,8 @@ export default function Carrosel() {
 						<li data-target="#myCarousel" data-slide-to="0" className="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
 						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
 					</ol>
 					<div className="carousel-inner">
 						<div className="carousel-item active">
@@ -23,6 +27,12 @@ export default function Carrosel() {
 						</div>
 						<div className="carousel-item">
 							<img className="d-block w-100 p3" style={{ height: 556 }} src={img3} alt="Terceiro Slide" />
+						</div>
+						<div className="carousel-item">
+							<img className="d-block w-100 p3" style={{ height: 556 }} src={img4} alt="Terceiro Slide" />
+						</div>
+						<div className="carousel-item">
+							<img className="d-block w-100 p3" style={{ height: 556 }} src={img5} alt="Terceiro Slide" />
 						</div>
 					</div>
 					<a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
