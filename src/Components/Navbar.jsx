@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from './Modal';
 import {Link} from 'react-router-dom';
+import imgLogo from '../Assets/logo.png';
 
 
 export default function Navbar() {
@@ -12,7 +13,7 @@ export default function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navBarMenuBiblioteca">
-                        <a className="navbar-brand" href="#">Libry Prime</a>
+                        <a className="navbar-brand" href="#"><img src={imgLogo} height="80px"/></a>
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item active">
                                 <Link to="/" className="nav-link btn-outline-info" href="#">Inicio<span className="sr-only">(current)</span></Link>
